@@ -54,7 +54,7 @@ int sumaLista(List *L) {
   int suma = 0;
   int *elemento = (int *)first(L);
   while (elemento != NULL) {
-    suma = suma + elemento;
+    suma = suma + *elemento;
     elemento = next(L);
   }
 
