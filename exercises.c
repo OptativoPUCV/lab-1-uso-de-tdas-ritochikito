@@ -52,9 +52,9 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
   int suma = 0;
-  void *elemento = first(L);
+  int *elemento = (int *)first(L);
   while (elemento != NULL) {
-    suma = suma + (int *)elemento;
+    suma = suma + elemento;
     elemento = next(L);
   }
 
