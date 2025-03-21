@@ -67,3 +67,20 @@ exercises.c:57:10: error: assignment to ‘int’ from ‘int *’ makes integer
 cc1: all warnings being treated as errors
 Compilation failed
 c6ccfc0
+Fri 21 Mar 2025 02:14:11 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:55:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   55 |   int elemento = first(L);
+      |                  ^~~~~
+exercises.c:56:22: error: multi-character character constant [-Werror=multichar]
+   56 |   while (elemento != 'NULL') {
+      |                      ^~~~~~
+exercises.c:58:14: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   58 |     elemento = next(L);
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+cf9080a
