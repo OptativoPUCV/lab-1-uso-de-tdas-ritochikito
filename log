@@ -105,3 +105,20 @@ exercises.c:56:22: error: multi-character character constant [-Werror=multichar]
 cc1: all warnings being treated as errors
 Compilation failed
 89ff92b
+Fri 21 Mar 2025 02:14:54 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:22: error: multi-character character constant [-Werror=multichar]
+   56 |   while (elemento != 'NULL') {
+      |                      ^~~~~~
+exercises.c:56:19: error: comparison between pointer and integer [-Werror]
+   56 |   while (elemento != 'NULL') {
+      |                   ^~
+exercises.c:57:10: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   57 |     suma += elemento;
+      |          ^~
+cc1: all warnings being treated as errors
+Compilation failed
+590a09f
