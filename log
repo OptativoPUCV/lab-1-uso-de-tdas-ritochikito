@@ -2,3 +2,30 @@ Fri 21 Mar 2025 02:10:18 AM UTC:
  tests:  0|5
 total_score: 0/70
 3f6cb15
+Fri 21 Mar 2025 02:13:04 AM UTC: 
+ exercises.c | 29 +++++++++++++++--------------
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:55:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+   55 |   int elemento * = first(L);
+      |                ^
+exercises.c:55:18: error: expected expression before ‘=’ token
+   55 |   int elemento * = first(L);
+      |                  ^
+exercises.c:56:10: error: ‘elemento’ undeclared (first use in this function)
+   56 |   while (elemento != 'NULL') {
+      |          ^~~~~~~~
+exercises.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:56:22: error: multi-character character constant [-Werror=multichar]
+   56 |   while (elemento != 'NULL') {
+      |                      ^~~~~~
+exercises.c:58:23: error: expected ‘;’ before ‘}’ token
+   58 |     elemento = next(L)
+      |                       ^
+      |                       ;
+   59 |   }
+      |   ~                    
+cc1: all warnings being treated as errors
+Compilation failed
+273ba05
