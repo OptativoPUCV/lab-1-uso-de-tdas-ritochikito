@@ -84,3 +84,24 @@ exercises.c:58:14: error: assignment to ‘int’ from ‘void *’ makes intege
 cc1: all warnings being treated as errors
 Compilation failed
 cf9080a
+Fri 21 Mar 2025 02:14:36 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:55:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+   55 |   void elemento* = first(L);
+      |                ^
+exercises.c:55:18: error: expected expression before ‘=’ token
+   55 |   void elemento* = first(L);
+      |                  ^
+exercises.c:56:10: error: ‘elemento’ undeclared (first use in this function)
+   56 |   while (elemento != 'NULL') {
+      |          ^~~~~~~~
+exercises.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:56:22: error: multi-character character constant [-Werror=multichar]
+   56 |   while (elemento != 'NULL') {
+      |                      ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+89ff92b
