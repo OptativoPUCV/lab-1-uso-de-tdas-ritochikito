@@ -201,3 +201,17 @@ Sat 22 Mar 2025 10:37:31 PM UTC:
  tests:  1|4
 total_score: 10/70
 37c6694
+Sat 22 Mar 2025 10:43:06 PM UTC: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   80 |   while (elemento != NULL)
+      |   ^~~~~
+exercises.c:83:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   83 |     elemento = next(L);
+      |     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+96c3bbd
