@@ -128,5 +128,5 @@ int parentesisBalanceados(char *cadena) {
           pop(P); // Elimina el paréntesis abierto correspondiente
       }
   }
-  return top(P) == NULL;
+  return top(P) == NULL ? 1 : 0;
 }
