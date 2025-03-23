@@ -119,15 +119,15 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
   Stack *P = create_stack();
-  for (int i = 0; i < strlen(cadena); i++){
-    if (cadena[i] == '('){
-      push(P, cadena[i]);
-    }
-    else if (cadena[i] == ')'){
-      if (top(P) == NULL){
-        return 0;
+  for (int i = 0; i < strlen(cadena); i++) {
+      if (cadena[i] == '(') {
+          push(P, '(');
+      } else if (cadena[i] == ')') {
+          if (is_empty(P)) { // Verifica si la pila está vacía
+              return 0; // Los paréntesis no están balanceados
+          }
+          pop(P); // Elimina el paréntesis abierto correspondiente
       }
-    }
   }
-  return 0;
+  return is_empty(P);
 }

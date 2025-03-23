@@ -260,3 +260,27 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 fef2bc6
+Sun 23 Mar 2025 01:50:01 AM UTC: 
+ exercises.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:10: error: unused variable ‘dato’ [-Werror=unused-variable]
+   47 |     int *dato;
+      |          ^~~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:124:19: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  124 |           push(P, '(');
+      |                   ^~~
+      |                   |
+      |                   int
+In file included from exercises.c:2:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:126:15: error: implicit declaration of function ‘is_empty’ [-Werror=implicit-function-declaration]
+  126 |           if (is_empty(P)) { // Verifica si la pila está vacía
+      |               ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3d39f64
