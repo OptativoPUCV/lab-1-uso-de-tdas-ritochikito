@@ -44,7 +44,6 @@ List *crea_lista() {
   List *L = create_list();
   L = malloc(sizeof(int *) * 10);
   for (int i = 1; i <= 10; i++){
-    int *dato;
     
   }
 
@@ -118,16 +117,16 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-  Stack *P = create_stack();
-  for (int i = 0; i < strlen(cadena); i++) {
-      if (cadena[i] == '(') {
-          push(P, '(');
+  Stack *P = create_stack(); // Asume que create_stack() ya está implementado
+  for (int i = 0; cadena[i] != '\0'; i++) {
+      if (cadena[i] == "(") {
+          push(P, "("); // Agrega '(' a la pila
       } else if (cadena[i] == ')') {
-          if (is_empty(P)) { // Verifica si la pila está vacía
-              return 0; // Los paréntesis no están balanceados
+          if (top(P) == NULL) { // Usa top para verificar si la pila está vacía
+              return 0; // Paréntesis no balanceados
           }
           pop(P); // Elimina el paréntesis abierto correspondiente
       }
   }
-  return is_empty(P);
+  return top(P) == NULL;
 }
