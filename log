@@ -346,3 +346,9 @@ Sun 23 Mar 2025 02:02:52 AM UTC:
  tests:  7|1
 total_score: 60/70
 d0400f3
+Sun 23 Mar 2025 02:19:42 AM UTC: 
+ exercises.c | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+ tests:  4|1
+total_score: 50/70
+20a22ee
