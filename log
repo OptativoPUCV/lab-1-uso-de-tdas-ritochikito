@@ -239,3 +239,24 @@ Sat 22 Mar 2025 10:53:45 PM UTC:
  tests:  3|2
 total_score: 40/70
 5697663
+Sun 23 Mar 2025 12:21:11 AM UTC: 
+ exercises.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:10: error: unused variable ‘dato’ [-Werror=unused-variable]
+   47 |     int *dato;
+      |          ^~~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:124:21: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  124 |       push(P, cadena[i]);
+      |               ~~~~~~^~~
+      |                     |
+      |                     char
+In file included from exercises.c:2:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fef2bc6
