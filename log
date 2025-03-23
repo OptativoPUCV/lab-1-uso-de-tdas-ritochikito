@@ -314,3 +314,17 @@ Sun 23 Mar 2025 01:56:48 AM UTC:
  tests:  6|2
 total_score: 50/70
 d84d501
+Sun 23 Mar 2025 02:02:06 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:5: error: ‘i’ may be used uninitialized [-Werror=maybe-uninitialized]
+   48 |     pushBack(L, i);
+      |     ^~~~~~~~~~~~~~
+exercises.c:47:11: note: ‘i’ was declared here
+   47 |     void *i;
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+4bab10a
